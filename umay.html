@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Yes or No Example</title>
+	<style type="text/css">
+		body {
+			text-align: center;
+		}
+		button {
+			font-size: 24px;
+			padding: 10px;
+			margin: 20px;
+			border-radius: 10px;
+			cursor: pointer;
+			position: absolute;
+		}
+	</style>
+	<script type="text/javascript">
+		function moveNoButton() {
+			// Get the button element
+			var noButton = document.getElementById("no-btn");
+
+			// Get the window dimensions
+			var windowHeight = window.innerHeight;
+			var windowWidth = window.innerWidth;
+
+			// Set a random position for the button
+			var randomTop = Math.floor(Math.random() * (windowHeight - 100));
+			var randomLeft = Math.floor(Math.random() * (windowWidth - 200));
+			noButton.style.top = randomTop + "px";
+			noButton.style.left = randomLeft + "px";
+		}
+	</script>
+</head>
+<body>
+	<h1>Do you want to proceed?</h1>
+	<button id="yes-btn" onclick="alert('Great! Proceeding now.')">Yes</button>
+	<button id="no-btn" onclick="moveNoButton()">No</button>
+</body>
+</html>
